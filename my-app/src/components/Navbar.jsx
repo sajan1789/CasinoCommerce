@@ -47,8 +47,8 @@ function Navbar({ className }) {
       }
     ];
     const Services = [
-      { href: "/web-dev", text: "Web Development" },
-      { href: "/interface-design", text: "Casino Gaming" },
+      { href: "/webdevelopment", text: "Web Development" },
+      { href: "/casinoaming", text: "Casino Gaming" },
       { href: "/seo", text: "Sport Game" },
       { href: "/branding", text: "Game Provider" }
     ];
