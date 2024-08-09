@@ -13,7 +13,7 @@ import IconDisplay from "@/components/IconDisplay";
 import Footer from "@/components/Footer";
 function ShootingStarsAndStarsBackgroundDemo() {
     return (
-        <div className="h-auto rounded-md bg-neutral-900 flex flex-col items-center justify-center w-full gap-10">
+        <div className="h-auto rounded-md bg-neutral-900 flex flex-col items-center justify-center w-full gap-14">
             <div className="h-[42rem] rounded-md bg-neutral-900 flex flex-col items-center justify-center relative w-full gap-12">
                 <h2 className="relative flex-col md:flex-row z-10 text-3xl md:text-5xl md:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-white to-white flex items-center gap-2 md:gap-8">
                     <span>Welcome to CasinoNinga Your One-Stop Online Web Services Provider!</span>
@@ -33,9 +33,11 @@ function ShootingStarsAndStarsBackgroundDemo() {
                     Services</h2>
                 <WebServices />
             </div>
-            <div className="flex flex-col gap-10 items-center justify-center">
+            <div className="flex flex-col gap-12 items-center justify-center">
+
             <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-                    Client Review</h2>
+            We're Trusted by Clients</h2>
+            <p className=" w-[50%] flex text-center">Our clients share their experiences of transformation and growth. Unfiltered feedback and the true testament to our service quality.</p>
                 <WebReview />
             </div>
             <div className="flex flex-col gap-10 items-center justify-center">
