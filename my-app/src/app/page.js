@@ -10,6 +10,10 @@ import { WavyBackground } from "@/components/ui/wavy-background";
 import Developers from "@/components/Developers";
 import Footer from "@/components/Footer";
 import { Example } from "@/components/Example";
+import TurnKey from "@/components/TurnKey";
+import CasinoGameAggregation from "@/components/CasinoGameAggregation";
+import WebApi from "@/components/WebApi";
+import FiguresAndFacts from "@/components/FiguresAndFacts";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col  mt-4 justify-between antialiased">
@@ -17,6 +21,10 @@ export default function Home() {
       <FeaturesSectionDemo/>
       <Products/>
       <GameProvider/>
+      <TurnKey/>
+      <CasinoGameAggregation/>
+      <WebApi/>
+      <FiguresAndFacts/>
       <Review/>
       <Example/>
       <Developers/>

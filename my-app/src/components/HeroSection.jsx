@@ -5,6 +5,7 @@ import Image from 'next/image';
 import casinoImage3 from '../assets/image/casinoImage3.jpg';
 import casinoHeroImage from '../assets/image/casinoImageHero.jpeg'
 import casinoHeroImage2 from '../assets/image/casinoheroImage.png'
+import illustrator from '../assets/image/herocasinologo.jpg'
 function HeroSection() {
     return (
         <div className="h-[100vh] w-full flex items-center justify-center p-10  ">
@@ -29,7 +30,7 @@ function HeroSection() {
                 </div>
                 <div className="w-full md:w-1/2 h-full flex justify-center md:justify-end flex-col  ">
                     {/* <Image src={casinoHeroImage} alt="Casino Image" className="w-[100%] h-auto rounded-lg shadow-lg" /> */}
-                    <Image src={casinoImage3} alt="Casino Image" className="w-[100%] h-auto rounded-lg shadow-lg" />
+                    <Image src={illustrator} alt="Casino Image" className="w-[100%] h-[500px] rounded-lg shadow-lg" />
 
                 </div>
             </div>
