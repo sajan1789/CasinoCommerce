@@ -16,7 +16,7 @@ const FiguresAndFacts = () => {
         <div className="text-left flex flex-col gap-4  w-[45%] ">
           <h2 className="text-4xl font-bold text-white">FIGURES AND FACTS</h2>
           <p className="mt-4 text-lg leading-relaxed max-w-3xl text-gray-300">
-            NinjaGame is not just a software provider; we're your strategic
+            NinjaGame is not just a software provider; we are your strategic
             partner in the ever-evolving iGaming world. Our offerings include
             premium content, world-class igaming software, and innovative tools
             that cater to businesses across the iGaming spectrum, regardless of

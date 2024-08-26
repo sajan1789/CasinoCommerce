@@ -36,7 +36,7 @@ function ShootingStarsAndStarsBackgroundDemo() {
             <div className="flex flex-col gap-12 items-center justify-center">
 
             <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-            We're Trusted by Clients</h2>
+            We are Trusted by Clients</h2>
             <p className=" w-[50%] flex text-center">Our clients share their experiences of transformation and growth. Unfiltered feedback and the true testament to our service quality.</p>
                 <WebReview />
             </div>
