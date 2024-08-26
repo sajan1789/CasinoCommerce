@@ -3,12 +3,15 @@ import React from 'react'
 import { BackgroundGradient } from './ui/background-gradient';
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import casinoImage1 from '../assets/image/casinoImage1.jpg'
-import casinoImage2 from '../assets/image/casinoImage2.jpg'
-import casinoImage3 from '../assets/image/casinoImage3.jpg'
+import casinoonline from '../assets/image/casinoonline.jpg'
+import cricketimage from '../assets/image/cricketimage1.jpg'
+import sportbook from '../assets/image/cricketimage2.jpg'
+import webappimage from '../assets/image/webappimage.jpg'
 import casinoImage4 from '../assets/image/casinoImage4.jpg'
+import apiimage from '../assets/image/apiImage.jpg'
 import uiuxdesign from '../assets/image/uiuxdesign.jpg'
 import turnkey from '../assets/image/turnkey.png'
+import cryptocasino from '../assets/image/cryptocasion.jpg'
 import Link from "next/link";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 
@@ -17,37 +20,37 @@ const Products = () => {
         {
           title: "Casino",
           description: "We create high-quality, immersive casino games that captivate players and keep them engaged. Our solutions are designed to offer a seamless and exciting gaming experience.",
-          image: casinoImage1, // Update the path as needed
+          image: casinoImage4, // Update the path as needed
         },
         
         {
           title: "WebApp",
           description: "Develop robust and intuitive web applications tailored to your business needs. Our web apps are designed to offer superior performance, security, and user experience.",
-          image: casinoImage3,// Update the path as needed
+          image: webappimage,// Update the path as needed
         },
         {
           title: "Sport",
           description: "Our sports betting software provides comprehensive solutions for both in-play and pre-match betting. We offer advanced features that ensure a smooth and engaging user experience.",
-          image: casinoImage2, // Update the path as needed
+          image: cricketimage, // Update the path as needed
         },
         {
           title: "Api Provider",
           description: "We provide powerful and secure APIs that allow seamless integration with various platforms and services. Our APIs are designed to be scalable and reliable, supporting your business growth.",
-          image: casinoImage4,
+          image: apiimage,
         },{
             title: "Online Casino",
             description: "We create high-quality, immersive casino games that captivate players and keep them engaged. Our solutions are designed to offer a seamless and exciting gaming experience.",
-            image: casinoImage1, // Update the path as needed
+            image: casinoonline, // Update the path as needed
           },
           {
             title: "Crypto Casino",
             description:"Сutting-edge crypto casino where possibilities are endless! With over 30 cryptocurrencies accepted, you can experience a new level of borderless payments, unlocking a world of limitless opportunities.",
-            image: casinoImage2, // Update the path as needed
+            image: cryptocasino, // Update the path as needed
           },
           {
             title:'Sportsbook',
-            description:"Unique and high-performance solution for sports betting operations. NuxGame offers unparalleled performance, reliability, and scalability for all sports betting operations.",
-            image:casinoImage2,
+            description:"Unique and high-performance solution for sports betting operations. Ninja Game offers unparalleled performance, reliability, and scalability for all sports betting operations.",
+            image:sportbook,
           },
       ];
       
