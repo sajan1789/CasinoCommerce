@@ -29,6 +29,7 @@ export default function Home() {
       <WebApi/>
       <FiguresAndFacts/>
       <IconDisplay/>
+      <AppleCardsCarouselDemo/>
       <Review/>
      
       {/* <div className="flex flex-col gap-10 items-center justify-center">
