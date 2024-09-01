@@ -16,7 +16,7 @@ function HeroSection() {
                 fill="white"
             />
             <div className="flex  flex-col md:flex-row w-full max-w-6xl mx-auto items-center justify-between space-y-8 md:space-y-0 sm:mt-0 -mt-[200px]">
-                <div className="flex flex-col gap-6 w-full md:w-[70%] items-center md:items-start justify-center h-full px-6">
+                <div className="flex flex-col gap-12 w-full md:w-[70%] items-center md:items-start justify-center h-full px-6">
                     <h1 className="sm:text-5xl text-[29px] font-bold text-center md:text-left text-white">Leading Casino Software Provider</h1>
                     <p className="sm:text-base text-[18px] text-center md:text-left text-white">We offer the best in class casino software solutions tailored to meet your needs.</p>
                     
