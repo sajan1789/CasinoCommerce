@@ -1,5 +1,8 @@
-'use client'
+'use client';
 import { useState } from "react";
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +11,7 @@ export default function ContactModal() {
     email: '',
     message: ''
   });
+  const [errors, setErrors] = useState({});
 
   const handleOpen = () => {
     setIsOpen(true);
@@ -15,6 +19,25 @@ export default function ContactModal() {
 
   const handleClose = () => {
     setIsOpen(false);
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
+    setErrors({});
+  };
+
+  const validate = () => {
+    let tempErrors = {};
+    if (!formData.name) tempErrors.name = "Name is required.";
+    if (!formData.email) {
+      tempErrors.email = "Email is required.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      tempErrors.email = "Email is invalid.";
+    }
+    if (!formData.message) tempErrors.message = "Message is required.";
+    setErrors(tempErrors);
+    return Object.keys(tempErrors).length === 0;
   };
 
   const handleChange = (e) => {
@@ -25,17 +48,32 @@ export default function ContactModal() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can handle form submission here
-    console.log(formData); // For now, just logging the data
-    // Optionally, clear the form after submission
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
+    if (!validate()) return;
+
+    const toastId = toast.info("Sending message...", {
+      autoClose: 1000, 
     });
-    handleClose(); // Close the modal after submission
+
+    try {
+      await axios.post('https://email-sender-2our.onrender.com/send-email', {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      });
+
+      toast.dismiss(toastId);
+      toast.success("Message sent successfully!", {
+        autoClose: 2000, 
+      });
+      handleClose();
+    } catch (error) {
+      toast.dismiss(toastId);
+      toast.error("Failed to send message. Please try again later.", {
+        autoClose: 2000, 
+      });
+    }
   };
 
   return (
@@ -48,8 +86,8 @@ export default function ContactModal() {
       </button>
 
       {isOpen && (
-        <div className="fixed mt-6 inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="relative w-full max-w-lg p-6 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg">
+        <div className="fixed mt-6 inset-0 z-50 flex items-center justify-center  bg-black bg-opacity-50 ">
+          <div className="relative sm:m-0 ml-3 mr-3 w-full max-w-lg p-6 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg transition-all duration-300">
             <button
               onClick={handleClose}
               className="absolute top-2 right-2 text-white"
@@ -58,37 +96,40 @@ export default function ContactModal() {
             </button>
             <h2 className="mb-4 text-2xl font-semibold text-white">Contact Us</h2>
             <form className="space-y-4" onSubmit={handleSubmit}>
-              <div>
+              <div className="transition-all duration-300">
                 <label className="block mb-1 text-white" htmlFor="name">Name</label>
                 <input
                   type="text"
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-md  border-opacity-20 focus:border-gray-500 focus:border-2 focus:ring-0 focus:outline-none"
+                  className={`w-full px-4 py-2 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-md border-opacity-20 focus:border-gray-500 focus:border-2 focus:ring-0 focus:outline-none ${errors.name ? 'border-red-500' : ''}`}
                   placeholder="Your Name"
                 />
+                {errors.name && <p className="text-red-500 text-sm mt-1 transition-all duration-300">{errors.name}</p>}
               </div>
-              <div>
+              <div className="transition-all duration-300">
                 <label className="block mb-1 text-white" htmlFor="email">Email</label>
                 <input
                   type="email"
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-md border border-white border-opacity-20 focus:border-gray-500 focus:border-2 focus:ring-0 focus:outline-none"
+                  className={`w-full px-4 py-2 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-md border border-white border-opacity-20 focus:border-gray-500 focus:border-2 focus:ring-0 focus:outline-none ${errors.email ? 'border-red-500' : ''}`}
                   placeholder="Your Email"
                 />
+                {errors.email && <p className="text-red-500 text-sm mt-1 transition-all duration-300">{errors.email}</p>}
               </div>
-              <div>
+              <div className="transition-all duration-300">
                 <label className="block mb-1 text-white" htmlFor="message">Message</label>
                 <textarea
                   id="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-md border border-white border-opacity-20 focus:border-gray-500 focus:border-2 focus:ring-0 focus:outline-none"
+                  className={`w-full px-4 py-2 bg-white bg-opacity-20 text-white placeholder-gray-300 rounded-md border border-white border-opacity-20 focus:border-gray-500 focus:border-2 focus:ring-0 focus:outline-none ${errors.message ? 'border-red-500' : ''}`}
                   placeholder="Your Message"
                 ></textarea>
+                {errors.message && <p className="text-red-500 text-sm mt-1 transition-all duration-300">{errors.message}</p>}
               </div>
               <button
                 type="submit"
@@ -100,6 +141,7 @@ export default function ContactModal() {
           </div>
         </div>
       )}
+      <ToastContainer />
     </div>
   );
 }
