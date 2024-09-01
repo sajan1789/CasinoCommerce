@@ -11,9 +11,9 @@ const FiguresAndFacts = () => {
   ];
 
   return (
-    <div className=" text-gray-100  py-4 px-8 w-full bg-black shadow-md mt-10" >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start lg:items-center ">
-        <div className="text-left flex flex-col gap-4  w-[45%] ">
+    <div className=" text-gray-100  py-4 px-8 w-full bg-black shadow-md mt-10 " >
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start lg:items-center text-center ">
+        <div className="text-left flex flex-col gap-4  sm:w-[45%]  items-center">
           <h2 className="text-4xl font-bold text-white">FIGURES AND FACTS</h2>
           <p className="mt-4 text-lg leading-relaxed max-w-3xl text-gray-300">
             NinjaGame is not just a software provider; we are your strategic

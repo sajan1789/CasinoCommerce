@@ -44,7 +44,7 @@ const Products = () => {
           },
           {
             title: "Crypto Casino",
-            description:"Сutting-edge crypto casino where possibilities are endless! With over 30 cryptocurrencies accepted, you can experience a new level of borderless payments, unlocking a world of limitless opportunities.",
+            description:"Сutting-edge crypto casino where possibilities are endless! With over 30 cryptocurrencies accepted, you can experience a new level of borderless payments.",
             image: cryptocasino, // Update the path as needed
           },
           {
@@ -56,12 +56,12 @@ const Products = () => {
       
       return (
         <div className="max-w-7xl mx-auto mt-10 ">
-  <h2 className="text-start text-3xl font-bold mb-6">What We Offer</h2>
+  <h2 className="sm:text-start text-center sm:text-3xl font-bold mb-6 text-4xl ">What We Offer</h2>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4">
     {products.map((product, index) => (
         
-      <CardContainer key={index} className="">
-        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-[425px] rounded-xl p-6 border">
+      <CardContainer key={index} className="ml-4 mr-4 sm:m-0">
+        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full  sm:h-[425px] h-auto rounded-xl p-6 border">
           <CardItem
             translateZ="50"
             className="text-xl font-bold text-neutral-600 dark:text-white "

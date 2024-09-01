@@ -9,7 +9,7 @@ function WebApi() {
             <div className="flex flex-col md:flex-row w-full max-w-6xl mx-auto items-center justify-between mt-16 space-y-8 md:space-y-0">
                 <div className="flex flex-col gap-10 w-full md:w-1/2 items-center md:items-start justify-center h-full px-6">
                      <div>
-                        <Image src={apiicon} alt="khihih" className=" w-[50px] h-[50px]" />
+                        <Image src={apiicon} alt="khihih" className=" sm:h-[50px] sm:w-[50px] w-[80px] h-[80px]" />
                      </div>
                     <h1 className="text-5xl font-bold text-center md:text-left">Website API</h1>
                     <p className="text-base text-center md:text-left">Integrate sports and casino content into your website using our scalable and practical solution</p>

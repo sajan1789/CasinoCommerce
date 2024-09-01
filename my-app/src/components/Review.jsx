@@ -5,7 +5,18 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 export function Review() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+    <div className="h-[40rem]  rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden gap-20 sm:mt-0 mb-20">
+      <div className="flex flex-col gap-10 items-center justify-center mt-6">
+        <h2 className="max-w-7xl  mx-auto text-4xl text-center md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+          We are Trusted by Clients
+        </h2>
+        <p className=" w-[60%] flex text-center">
+          Our clients share their experiences of transformation and growth.
+          Unfiltered feedback and the true testament to our service quality.
+        </p>
+
+      </div>
+
       <InfiniteMovingCards
         items={testimonials}
         direction="right"

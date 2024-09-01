@@ -8,17 +8,17 @@ import backgroundImg from '../assets/image/casinoBackground1.jpg'; // Your chose
 function HeroSection() {
     return (
         <div 
-            className="h-[100vh] w-full flex items-center justify-center p-10 bg-cover bg-center"
+            className="h-[100vh] w-full flex items-center justify-center p-10 bg-cover bg-center  "
             style={{ backgroundImage: `url(${backgroundImg.src})` }}
         >
             <Spotlight
                 className="-top-40 left-0 md:left-60 md:-top-20"
                 fill="white"
             />
-            <div className="flex flex-col md:flex-row w-full max-w-6xl mx-auto items-center justify-between mt-16 space-y-8 md:space-y-0">
-                <div className="flex flex-col gap-6 w-full md:w-1/2 items-center md:items-start justify-center h-full px-6">
-                    <h1 className="text-5xl font-bold text-center md:text-left text-white">Leading Casino Software Provider</h1>
-                    <p className="text-base text-center md:text-left text-white">We offer the best in class casino software solutions tailored to meet your needs.</p>
+            <div className="flex  flex-col md:flex-row w-full max-w-6xl mx-auto items-center justify-between space-y-8 md:space-y-0 sm:mt-0 -mt-[200px]">
+                <div className="flex flex-col gap-6 w-full md:w-[70%] items-center md:items-start justify-center h-full px-6">
+                    <h1 className="sm:text-5xl text-[29px] font-bold text-center md:text-left text-white">Leading Casino Software Provider</h1>
+                    <p className="sm:text-base text-[18px] text-center md:text-left text-white">We offer the best in class casino software solutions tailored to meet your needs.</p>
                     
                     <Link href={"/explore"}  >
                         <Button

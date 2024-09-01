@@ -14,9 +14,12 @@ import TurnKey from "@/components/TurnKey";
 import CasinoGameAggregation from "@/components/CasinoGameAggregation";
 import WebApi from "@/components/WebApi";
 import FiguresAndFacts from "@/components/FiguresAndFacts";
+import ContactModal from "@/components/ContactModal";
+import IconDisplay from "@/components/IconDisplay";
+import { AppleCardsCarouselDemo } from "@/components/AppleCardsCarouselDemo";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col  mt-4 justify-between antialiased">
+    <main className="flex min-h-screen flex-col  mt-4 justify-between antialiased ">
       <HeroSection/>
       <FeaturesSectionDemo/>
       <Products/>
@@ -25,7 +28,12 @@ export default function Home() {
       <CasinoGameAggregation/>
       <WebApi/>
       <FiguresAndFacts/>
+      <IconDisplay/>
       <Review/>
+     
+      {/* <div className="flex flex-col gap-10 items-center justify-center">
+                <AppleCardsCarouselDemo />
+            </div> */}
       <Example/>
       <Developers/>
       <Footer/>
